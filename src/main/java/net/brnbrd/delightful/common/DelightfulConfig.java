@@ -24,14 +24,9 @@ public class DelightfulConfig {
     public static ForgeConfigSpec.BooleanValue PUMPKIN_PIE_OVERHAUL;
     public static ForgeConfigSpec.BooleanValue USE_MILK_TAG;
     private static final ImmutableList<String> disabled_by_default_items = ImmutableList.of(
-        "copper_knife",
-        "bone_knife",
-        "amethyst_knife",
-        "emerald_knife",
-        "lapis_lazuli_knife",
-        "raw_goat",
-        "cooked_goat",
-        "green_tea_leaf"
+        //"raw_goat",
+        //"cooked_goat",
+        //"green_tea_leaf"
     );
 
     DelightfulConfig(ForgeConfigSpec.Builder builder) {

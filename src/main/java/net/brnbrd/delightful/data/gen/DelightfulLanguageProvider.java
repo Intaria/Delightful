@@ -4,7 +4,6 @@ import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.common.block.DelightfulBlocks;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.knife.DelightfulKnifeItem;
-import net.brnbrd.delightful.common.item.knife.Knives;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.util.Tuple;
 import net.minecraftforge.common.data.LanguageProvider;
@@ -24,8 +23,8 @@ public class DelightfulLanguageProvider extends LanguageProvider {
             .map(tuple -> new Tuple<>((DelightfulKnifeItem)tuple.getA(), tuple.getB()))
             .filter(t -> !t.getA().hasCustomName())
             .forEach(t -> knife(t.getA(), t.getB()));
-        addItem(Knives.OBSIDIAN_INFUSED_ENDERITE, "Obsidian-Infused Enderite Knife");
-        addItem(Knives.LARGE_AMETHYST, "Amethyst Knife");
+        //addItem(Knives.OBSIDIAN_INFUSED_ENDERITE, "Obsidian-Infused Enderite Knife");
+        //addItem(Knives.LARGE_AMETHYST, "Amethyst Knife");
         addItems();
     }
 

@@ -4,7 +4,6 @@ import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.knife.DelightfulKnifeItem;
-import net.brnbrd.delightful.common.item.knife.Knives;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
@@ -31,7 +30,7 @@ public class DelightfulItemModelProvider extends ItemModelProvider {
         DelightfulItems.SALMONBERRY_PIE.getId()
     );
     private static final List<ResourceLocation> EMISSIVE = List.of(
-        Knives.FIERY.getId()
+        //Knives.FIERY.getId()
     );
 
     @Override

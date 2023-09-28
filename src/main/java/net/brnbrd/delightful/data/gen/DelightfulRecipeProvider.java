@@ -9,7 +9,6 @@ import net.brnbrd.delightful.common.crafting.EnabledCondition;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.knife.CompatKnifeItem;
 import net.brnbrd.delightful.common.item.knife.DelightfulKnifeItem;
-import net.brnbrd.delightful.common.item.knife.Knives;
 import net.brnbrd.delightful.compat.ArsNouveauCompat;
 import net.brnbrd.delightful.compat.Mods;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
@@ -61,7 +60,7 @@ public class DelightfulRecipeProvider extends RecipeProvider implements IConditi
             .filter(item -> item instanceof DelightfulKnifeItem)
             .map(item -> (DelightfulKnifeItem) item)
             .forEach(k -> knife(k, finished));
-        knifeSmeltAndBlast((DelightfulKnifeItem) Knives.BONE.get(), "bone/knife", Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(Items.BONE_MEAL)), finished);
+        //knifeSmeltAndBlast((DelightfulKnifeItem) Knives.BONE.get(), "bone/knife", Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(Items.BONE_MEAL)), finished);
 
         // Foods
         wrap(ShapelessRecipeBuilder.shapeless(DelightfulItems.NUT_BUTTER_AND_JELLY_SANDWICH.get())

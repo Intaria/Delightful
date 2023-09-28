@@ -4,7 +4,6 @@ import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.item.knife.DelightfulKnifeItem;
-import net.brnbrd.delightful.common.item.knife.Knives;
 import net.brnbrd.delightful.compat.BYGCompat;
 import net.brnbrd.delightful.compat.Mods;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
@@ -31,10 +30,10 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 	protected void addTags() {
 
 		// Delightful
-		this.tag(DelightfulItemTags.FIRE_KNIVES)
-			.add(Knives.FIERY.get())
-			.add(Knives.KIWANO.get())
-			.add(Knives.BLAZING.get());
+		this.tag(DelightfulItemTags.FIRE_KNIVES);
+			//.add(Knives.FIERY.get())
+			//.add(Knives.KIWANO.get())
+			//.add(Knives.BLAZING.get());
 
 		// Farmer's Delight
 		this.tag(ModTags.WOODEN_CABINETS)
@@ -275,7 +274,7 @@ public class DelightfulItemTagProvider extends ItemTagsProvider {
 			.addTag(DelightfulItemTags.FRUITS_SALMONBERRIES);
 		this.tag(ItemTags.SMALL_FLOWERS)
 			.add(DelightfulItems.WILD_SALMONBERRIES.get());
-		this.tag(ItemTags.PIGLIN_LOVED).add(Knives.REFINED_GLOWSTONE.get());
+		//this.tag(ItemTags.PIGLIN_LOVED).add(Knives.REFINED_GLOWSTONE.get());
 		this.tag(ForgeTags.TOOLS_KNIVES)
 			.addTag(ModTags.KNIVES)
 			.addOptional(Util.rl("ae2", "certus_quartz_cutting_knife"))

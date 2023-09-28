@@ -26,33 +26,10 @@ public class KnifeEvents {
 	// Twilight Forest Compat
 	@SubscribeEvent
 	void onKnightmetalKnife(LivingHurtEvent e) {
-		LivingEntity target = e.getEntity();
-		if (!target.getLevel().isClientSide() && e.getSource().getDirectEntity() instanceof LivingEntity attacker) {
-			ItemStack weapon = attacker.getMainHandItem();
-			if (!weapon.isEmpty() && target.getArmorValue() > 0 && weapon.is(Knives.KNIGHTMETAL.get())) {
-				if (target.getArmorCoverPercentage() > 0) {
-					int moreBonus = (int) (2 * target.getArmorCoverPercentage());
-					e.setAmount(e.getAmount() + moreBonus);
-				} else {
-					e.setAmount(e.getAmount() + 2);
-				}
-				((ServerLevel) target.getLevel()).getChunkSource().broadcastAndSend(target, new ClientboundAnimatePacket(target, 5));
-			}
-		}
 	}
 
 	// Phantasm Compat
 	@SubscribeEvent
 	void onStelliumKnife(LivingHurtEvent e) {
-		LivingEntity target = e.getEntity();
-		if (!target.getLevel().isClientSide() && e.getSource().getDirectEntity() instanceof LivingEntity attacker) {
-			ItemStack weapon = attacker.getMainHandItem();
-			if (!weapon.isEmpty() &&
-				weapon.is(Knives.STELLIUM.get()) &&
-				attacker.getLevel().dimension() != Level.END &&
-				!(Util.hasTagString(weapon, "socket", "starlit"))) {
-				e.setAmount(Math.min(1.0F, e.getAmount()));
-			}
-		}
 	}
 }
